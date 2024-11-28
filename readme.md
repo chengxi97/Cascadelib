@@ -1,4 +1,4 @@
-# 项目概述
+# 1.项目概述
 
 本项目基于论文 *"High performance reconciliation for practical quantum key distribution systems"* 中提出的 Cascade 纠错算法。文章实现了两种模式的Cascade算法：“High Throughput”和“High Efficiency”。本程序采用“High Efficiency”（高协商效率）模式，因其处理速率已能满足大多数 QKD 系统的需求。
 
@@ -6,20 +6,22 @@
 
 ---
 
-# 算法说明
+# 2.项目说明
 
-待续。
+## 2.1 项目目录结构
 
----
-
-# 项目实现说明
-
-## 项目目录结构
-
+CascadeProject 
+├── CascadeLib
+   │ ├── x86
+   │ ├── x64
+├── Example
+   │ ├── CascadeAlice
+   │ ├── CascadeBob
+   
 - **CascadeLib**：包含 x86 和 x64 版本的 `.h` 文件、`.dll` 文件和 `.lib` 文件。
 - **Example**：包含测试例程 `CascadeAlice` 和 `CascadeBob`，具体使用方式可参考该例程。
 
-## 项目使用说明
+## 2.2 项目使用说明
 
 本项目在 Windows 操作系统下使用 Visual Studio 2019 编译和测试通过。库文件的使用方式与普通 `.dll` 文件一致。
 
@@ -37,10 +39,9 @@
 - 本程序采用流水处理模式，流水的创建和销毁会带来性能损耗。为获得最佳性能，建议连续不断地输入数据。
 - 程序内部会对数据进行处理（包括置乱），因此输出数据序列的比特顺序与输入序列不完全一致。测试人员可通过监测网络数据量估算泄露信息量。
 
+## 2.3 Cascade纠错函数使用说明
 
-## Cascade纠错函数使用说明
-
-### 1 函数 initCascade()
+### 函数 initCascade()
 
 说明：初始化 Cascade 相关参数。
 
@@ -59,7 +60,7 @@ void initCascade(double qber, SOCKET* ptrConn, int flag, void** cascadeInst);
 
 ---
 
-### 2 函数 getCascadeBuf()
+### 函数 getCascadeBuf()
 
 说明：获取 Cascade 缓存，返回数据大小。
 
@@ -77,7 +78,7 @@ int getCascadeBuf(unsigned char** data, unsigned char** code, void* cascadeInst)
 
 ---
 
-### 3 函数 cascadeEC()
+### 函数 cascadeEC()
 
 说明：Cascade 纠错函数（核心函数）。
 
@@ -96,7 +97,7 @@ int cascadeEC(unsigned int* codeSize, void* cascadeInst);
 
 ---
 
-### 4 函数 getCascadeStat()
+### 函数 getCascadeStat()
 
 说明：获取 Cascade 统计数据。
 
@@ -113,3 +114,7 @@ void getCascadeStat(double* qber, unsigned int* leaked, unsigned int* inputNum, 
 - interact: 完成本组纠错的交互次数。
 
 返回值：无。
+
+# 3. 其他问题
+
+待续
