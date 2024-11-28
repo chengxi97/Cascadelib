@@ -11,19 +11,12 @@
 ## 2.1 项目目录结构
 
 CascadeProject
-
 ├── CascadeLib
-
-    ├── x86
-
-    ├── x64
-
+│   ├── x86
+│   ├── x64
 ├── Example
-
-    ├── CascadeAlice
-
-    ├── CascadeBob
-
+│   ├── CascadeAlice
+│   ├── CascadeBob
    
 - **CascadeLib**：包含 x86 和 x64 版本的 `.h` 文件、`.dll` 文件和 `.lib` 文件。
 - **Example**：包含测试例程 `CascadeAlice` 和 `CascadeBob`，具体使用方式可参考该例程。
