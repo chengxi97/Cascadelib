@@ -2,7 +2,7 @@
 
 本项目基于论文 *"High performance reconciliation for practical quantum key distribution systems"* 中提出的 Cascade 纠错算法。文章实现了两种模式的Cascade算法：“High Throughput”和“High Efficiency”。本程序采用“High Efficiency”（高协商效率）模式，因其处理速率已能满足大多数 QKD 系统的需求。
 
-**重要提示**：本程序为仿真测试程序，用于支撑论文实验结果，内部可能存在隐藏 BUG，请谨慎用于生产环境。更多设计细节可参考论文：[https://arxiv.org/abs/2101.12565]。
+**重要提示**：本程序为仿真测试程序，用于支撑论文实验结果，内部可能存在隐藏 BUG，请谨慎用于生产环境。更多设计细节可参考论文：https://arxiv.org/abs/2101.12565 。
 
 ---
 
