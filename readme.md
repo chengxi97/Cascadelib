@@ -3,13 +3,23 @@
 本项目基于论文“High performance reconciliation for practical quantum key distribution systems”中提出的Cascade纠错算法。
 重要：本程序仅为仿真测试程序，为支撑文章实验结果所用，内部可能存在隐藏BUG，请谨慎用于生产环境。程序具体设计细节，详见论文（https://arxiv.org/abs/2101.12565）。
 
-# 项目使用说明
+# 算法说明
 
 待续
 
-# Cascade纠错函数使用说明
+# 项目实现说明
 
-## 1 函数 initCascade()
+## 项目目录说明
+
+待续
+
+## 项目使用说明
+
+待续
+
+## Cascade纠错函数使用说明
+
+### 1 函数 initCascade()
 
 说明：初始化 Cascade 相关参数。
 
@@ -28,7 +38,7 @@ void initCascade(double qber, SOCKET* ptrConn, int flag, void** cascadeInst);
 
 ---
 
-## 2 函数 getCascadeBuf()
+### 2 函数 getCascadeBuf()
 
 说明：获取 Cascade 缓存，返回数据大小。
 
@@ -46,7 +56,7 @@ int getCascadeBuf(unsigned char** data, unsigned char** code, void* cascadeInst)
 
 ---
 
-## 3 函数 cascadeEC()
+### 3 函数 cascadeEC()
 
 说明：Cascade 纠错函数（核心函数）。
 
@@ -65,7 +75,7 @@ int cascadeEC(unsigned int* codeSize, void* cascadeInst);
 
 ---
 
-## 4 函数 getCascadeStat()
+### 4 函数 getCascadeStat()
 
 说明：获取 Cascade 统计数据。
 
